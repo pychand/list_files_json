@@ -1,7 +1,12 @@
 # tests/test_main.py
 import os
 import pytest
-from pyls import ls, format_size
+import sys
+
+script_dir = os.path.dirname(os.path.realpath(__file__))
+print(script_dir)
+sys.path.append(script_dir)
+from pyls.__main__ import ls, format_size
 
 @pytest.fixture
 def directory_structure():
